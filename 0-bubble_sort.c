@@ -1,6 +1,5 @@
 #include "sort.h"
 
-
 /**
  * swap_ - swap to element
  * @a: the first element
@@ -24,25 +23,30 @@ void swap_(int *a, int *b)
 */
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, j, size2 = size;
-	int tmp, flag = 0;
+	int swapped = 0;
+	size_t i;
+	size_t j;
 
 	if (array == NULL || size < 2)
-		return;
-	for (i = 0; i < size; i++)
 	{
-		for (j = 1; j < size2; j++)
+    	return;
+	}
+
+
+	for (i = 0; i < size - 1; i++)
+	{
+		for (j = 0; j < size - i - 1; j++)
 		{
-			if (array[j - 1] > array[j])
+			if (array[j] > array[j + 1])
 			{
-				flag = 1;
-				swap_(&array[j - 1], &array[j]);
+				swap_(&array[j], &array[j + 1]);
 				print_array(array, size);
+				swapped++;
 			}
 		}
-		if (flag == 0)
+		if (swapped == 0)
+        {
 			break;
-		flag = 0;
-		size2--;
+		}
 	}
 }
