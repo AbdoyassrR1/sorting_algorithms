@@ -9,34 +9,28 @@
 */
 void bubble_sort(int *array, size_t size)
 {
-	int swapped = 0;
+	size_t i, n;
 	int temp;
-	size_t i;
-	size_t j;
+	int swapped = 1;
 
-	if (array == NULL || size < 2)
-	{
+	if (!array || size < 2)
 		return;
-	}
 
-
-	for (i = 0; i < size - 1; i++)
+	n = size;
+	while (swapped)
 	{
-		for (j = 0; j < size - i - 1; j++)
+		swapped = 0;
+		for (i = 1; i < n; i++)
 		{
-			if (array[j] > array[j + 1])
+			if (array[i - 1] > array[i])
 			{
-
-				temp = array[j];
-				array[j] = array[j + 1];
-				array[j + 1] = temp;
+				temp = array[i - 1];
+				array[i - 1] = array[i];
+				array[i] = temp;
+				swapped = 1;
 				print_array(array, size);
-				swapped++;
 			}
 		}
-		if (swapped == 0)
-		{
-			break;
-		}
+		n--;
 	}
 }
