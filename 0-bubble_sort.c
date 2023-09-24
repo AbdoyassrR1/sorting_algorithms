@@ -29,7 +29,7 @@ void bubble_sort(int *array, size_t size)
 
 	if (array == NULL || size < 2)
 	{
-    	return;
+		return;
 	}
 
 
@@ -45,7 +45,7 @@ void bubble_sort(int *array, size_t size)
 			}
 		}
 		if (swapped == 0)
-        {
+		{
 			break;
 		}
 	}
