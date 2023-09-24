@@ -2,7 +2,7 @@
 
 
 /**
- * _swap - swap to element
+ * swap_ - swap to element
  * @a: the first element
  * @b: the second element
  *
@@ -10,9 +10,9 @@
 */
 void swap_(int *a, int *b)
 {
-    int temp = *b;
-    *b = *a;
-    *a = temp;
+	int temp = *b;
+	*b = *a;
+	*a = temp;
 }
 
 /**
@@ -30,7 +30,7 @@ void bubble_sort(int *array, size_t size)
 
 	if (array == NULL || size < 2)
 	{
-    	return;
+		return;
 	}
 
 
@@ -46,7 +46,7 @@ void bubble_sort(int *array, size_t size)
 			}
 		}
 		if (swapped == 0)
-        {
+		{
 			break;
 		}
 	}
