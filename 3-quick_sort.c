@@ -2,9 +2,9 @@
 
 /**
 * partition - Lomutu partition scheme for quicksort algorithm
-* @a: Array to sort
-* @l: lowest index of array
-* @h: highest index of array
+* @a: Arr to be sorted.
+* @l: lowest index.
+* @h: highest index.
 * Return: index of pivot
 */
 
@@ -43,7 +43,7 @@ int partition(int *a, int l, int h)
 }
 
 /**
-* qs - Quicksort recurssive function
+* qs - Quicksort recurssive function.
 * @a: array to sort
 * @l: lowest index
 * @h: highest index
@@ -64,8 +64,8 @@ void qs(int *a, int l, int h)
 
 /**
 * quick_sort - sorts array using quicksort algorithm
-* @array: Array to sort
-* @size: Size of array to sort
+* @array: Array to be sorted.
+* @size: Size of array
 */
 
 void quick_sort(int *array, size_t size)
