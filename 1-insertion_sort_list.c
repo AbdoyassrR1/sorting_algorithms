@@ -6,15 +6,15 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *current, *swap, *prv;
+	listint_t *curr, *swap, *prv;
 
 	if (!list || !*list)
 		return;
 
-	current = *list;
-	while ((current = current->next))
+	curr = *list;
+	while ((curr = curr->next))
 	{
-		swap = current;
+		swap = curr;
 		while (swap->prev && swap->n < swap->prev->n)
 		{
 			prv = swap->prev;
